@@ -1,7 +1,7 @@
 const expressSession = require('express-session');
 
-const core = require('./core/core.js');
-const mongo = require('./mongo/mongo.js');
+const core = require('../core/core.js');
+const mongo = require('../mongo/mongo.js');
 
 class MongoSessionStore extends expressSession.Store {
 
