@@ -8,7 +8,7 @@ class MongoSessionStore extends expressSession.Store {
     async get(id, callback) {
         try {
             const session = await mongo.open().collection('sessions').findOne({ _id: id });
-            callback(null, core.data.get(session, 'data', 'object'));
+            callback(null, core.data.get(session, 'data', 'object', null));
         } catch (error) {
             callback(error, null);
         }
